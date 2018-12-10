@@ -1,0 +1,62 @@
+import { Invert, Split } from 'mdx-deck/layouts'
+import { Head, Image } from 'mdx-deck'
+
+import { SlotMachine } from './src/SlotMachine'
+
+export { default as theme } from './theme'
+
+<Head>
+  <title>TPE 2019</title>
+</Head>
+
+export default Invert
+
+# Générer l'aléatoire
+
+Peut-on vraiment produire des nombres au hasard ?
+
+---
+
+# La notion d'aléatoire
+
+---
+
+<SlotMachine />
+
+---
+
+```js
+// f: t → { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }
+function getRandomSlotValue() {
+  return Math.floor(Math.random() * (9 + 1))
+}
+```
+
+---
+
+# PRNG
+
+## *Pseudo Random Number Generator*
+
+---
+
+> “la génération de nombres aléatoires est trop importante pour être confiée au hasard”
+
+– Robert R. Coveyou
+
+---
+export default Invert
+
+# Conclusion
+
+---
+
+# Remerciements
+
+---
+export default Split
+
+<Image src='https://i.ytimg.com/vi/2cPj2SSinlE/maxresdefault.jpg' />
+
+## Nicolas Gisin
+##### Professeur de Physique Quantique
