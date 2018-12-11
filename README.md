@@ -4,4 +4,5 @@
 
 ### Informations
 
-[mdx-deck]: https://github.com/jxnblk/mdx-deck
+- [mdx-deck](https://github.com/jxnblk/mdx-deck)
+- [react](https://github.com/facebook/react/)

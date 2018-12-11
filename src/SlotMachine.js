@@ -6,23 +6,14 @@ const Container = styled.div([], {
   alignItems: 'center'
 })
 
-const Refresh = styled.button([], {
-  background:
-    '#FFF url(https://cbwconline.com/IMG/Codepen/Blue%20Refresh.svg) center/28px no-repeat',
-  height: '40px',
-  width: '40px',
-  margin: '10px auto',
-  borderRadius: '50%',
-  border: 'none',
-  boxShadow: '0px 5px 15px rgba(#000, .3)'
-})
-
 const Slot = styled.h1([], {
+  userSelect: 'none',
   margin: '10px',
-  fontSize: '3em',
-  border: '#ffffff solid 2px',
-  borderRadius: '12px',
-  padding: '13px'
+  fontSize: '5.5em',
+  border: '#ffffff solid 5px',
+  borderRadius: '20px',
+  padding: '20px',
+  margin: '0 30px'
 })
 
 export class SlotMachine extends React.Component {
@@ -32,6 +23,15 @@ export class SlotMachine extends React.Component {
       draw: Array.from({ length: 4 }, getRandomSlotValue)
     }
   }
+
+  componentWillMount() {
+    this.interval = setInterval(this.drawAgain, 1000)
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval)
+  }
+
   drawAgain = () => {
     const draw = Array.from({ length: 4 }, getRandomSlotValue)
     this.setState({ draw })
@@ -45,7 +45,6 @@ export class SlotMachine extends React.Component {
             <Slot key={i}>{v}</Slot>
           ))}
         </Container>
-        <Refresh onClick={this.drawAgain} />
       </div>
     )
   }
