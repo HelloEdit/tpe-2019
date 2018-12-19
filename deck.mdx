@@ -1,7 +1,7 @@
-import { Invert, Split } from 'mdx-deck/layouts'
-import { Head, Image } from 'mdx-deck'
+import { Invert, Split, Horizontal } from 'mdx-deck/layouts'
+import { Head, Image, Appear } from 'mdx-deck'
 
-import { SlotMachine } from './src/SlotMachine'
+import { SlotMachine, CoinTossing } from './src/'
 
 export { default as theme } from './theme'
 
@@ -40,9 +40,30 @@ function getRandomSlotValue() {
 
 ---
 
-# PRNG
+# PNRG
+## Pseudorandom number generator
 
-## Pseudorandom Number Generator
+---
+
+<Appear>
+  <h3>La sortie est déterminée seulement par la graine et l'algorithme</h3>
+  <h3>La même graine donnera toujours la même sortie</h3>
+  <h3>La qualité des sorties augmente au détriment de la vitesse de génération</h3>
+</Appear>
+
+---
+export default Invert
+
+![](https://cdn-images-1.medium.com/max/1200/1*G2aXFFqqUane0d1Maw-fPw.png)
+
+---
+export default Invert
+
+![](https://cdn-images-1.medium.com/max/1200/1*dpaeqFkE-kqW9SR6UOTZBw.png)
+
+---
+
+## La physique est déterministe
 
 ---
 export default Invert
@@ -60,3 +81,15 @@ export default Split
 
 ## Nicolas Gisin
 ##### Professeur de Physique Quantique
+
+---
+<div style={{ textAlign: 'left' }}>
+  <h2>Ouvrage</h2>
+
+  <h6>Gisin, Nicolas. <i>L’impensable Hasard</i>. Odile Jacob, 2012. OJ.SCIENCES.</h6>
+
+  <h4>Documentation</h4>
+
+  <h6>Auffèves, Alexia. <i>Qu’est-ce que le hasard quantique ?</i> Le Journal du CNRS, 2017.</h6>
+  <h6>Wheeler, David. <i>Random numbers</i> Secure Programming for Linux and Unix HOWTO, 2003.</h6>
+</div>
