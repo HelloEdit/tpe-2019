@@ -8,7 +8,7 @@ Mika LIAO <Datacre>
 """
 
 
-def gcm(m, a, c, x):
+def gcl(m, a, c, x):
     """
         Générateur congruentiel linéaire en utilisant la formule
         telle que décrite par Derrick Lehmer ainsi que les générateurs
@@ -25,7 +25,7 @@ seed = 125
 # seed = 10
 
 
-gen = gcm(a=25, c=16, m=256, x=seed)
+gen = gcl(a=25, c=16, m=256, x=seed)
 
 result = []
 for i in range(500):
