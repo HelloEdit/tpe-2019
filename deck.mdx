@@ -17,9 +17,11 @@ Quels sont les moyens existants pour générer de l'aléatoire ?
 
 ---
 
+export default Invert
+
 <img
-  src='https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/calvin.jpg'
-  style={{width: "80vh"}}
+  src="https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/calvin.jpg"
+  style={{ width: '80vh' }}
 />
 
 ---
@@ -42,37 +44,53 @@ function getRandomSlotValue() {
 ```
 
 ---
+
 export default Invert
 
 # Pseudo Random Number Generator
 
+#### _PRNG_
+
 ---
-> “qui considère l'arithmétique pour produire des nombres aléatoires commet un péché”
+
+> “Quiconque considère l'arithmétique pour générer des nombres aléatoires est en train de commettre un péché”
 
 – John V. Neumann
 
 ---
+
 export default Invert
 
 # Générateur Congruentiel Linéaire
 
 <img
-  src='https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/formula.png'
+  src="https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/formula.png"
   width="60%"
 />
 
 ---
+
 export default Invert
 
 <img
-  src='https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/python_organi.png'
-  style={{width: "80vh"}}
+  src="https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/python_organi.png"
+  style={{ width: '80vh' }}
 />
 
 ---
-export default Invert
 
-<img src='https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/code_python.png' />
+```python
+def gcl(m: int, a: int, c: int, x: int):
+  """Générateur Congruentiel Linéaire"""
+  while True:
+    yield x
+    x = (a * x + c) % m
+
+gen = gcl(a=25, c=16, m=256, x=seed)
+
+for i in range(500):
+  print(next(gen))
+```
 
 ---
 
@@ -82,7 +100,9 @@ export default Invert
   <h3>La sortie est déterminée seulement par la graine et l'algorithme</h3>
   <h3>La même graine donnera toujours la même sortie</h3>
   <h3>Les sorties sont soumises à la périodicité du générateur</h3>
-  <h3>La qualité des sorties augmente au détriment de la vitesse de génération</h3>
+  <h3>
+    La qualité des sorties augmente au détriment de la vitesse de génération
+  </h3>
 </Appear>
 
 ---
@@ -90,19 +110,33 @@ export default Invert
 ![dice](https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/dice.gif)
 
 ---
+
 export default Invert
 
-<img 
-  src='https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/lava_lamps.jpg'
-  width="90%"  
+<img
+  src="https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/lava_lamps.jpg"
+  width="90%"
 />
 
 ---
-export default Split
 
-![puce IDQ](https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/idquantique.png)
+export default Invert
 
-![schéma](https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/schema_quantique.jpg)
+<img
+  src="https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/schema_quantique.png"
+  width="75%"
+/>
+
+---
+
+export default Invert
+
+<img
+  src="https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/idquantique.png"
+  width="75%"
+/>
+
+#### 44mm x 51mm
 
 ---
 
@@ -110,36 +144,38 @@ export default Split
 
 ---
 
-<Image 
-  alt='quantum computer'
-  src='https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/quantum_computer.jpg' 
+<Image
+  alt="quantum computer"
+  src="https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/quantum_computer.jpg"
 />
 
 ---
+
 export default Split
 
-
-<Image 
-  alt='quantum crypto'
-  src='https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/laser.jpg' 
+<Image
+  alt="quantum crypto"
+  src="https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/laser.jpg"
 />
 
 ### Cryptographie quantique
-
 
 ---
 
 # Remerciements
 
 ---
+
 export default Split
 
-<Image src='https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/gisin.jpg' />
+<Image src="https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/gisin.jpg" />
 
 # Nicolas Gisin
+
 ### Professeur de physique quantique
 
 ---
+
 export default Split
 
 # M. Hamada
@@ -149,12 +185,14 @@ export default Split
 ---
 
 <div style={{ textAlign: 'left' }}>
-  <h2>Ouvrage</h2>
 
-  <h6>GISIN, Nicolas. <i>L’impensable Hasard</i>. Odile Jacob, 2012. OJ.SCIENCES. <small>ISBN 978-2738128317</small></h6>
+<h5>Ouvrage</h5>
+<h6>GISIN, Nicolas. <i>L’impensable Hasard</i>. Odile Jacob, 2012. <small>ISBN 978-2738128317</small></h6>
+<h5>Articles</h5>
+<h6>AUFFEVE, Alexia. <i>Qu’est-ce que le hasard quantique ?</i> Le Journal du CNRS, 2017.</h6>
+<h6>VOS, Anton. <i>Le hasard, le vrai</i>. Université de Genève, Campus n° 111.</h6>
+<h6>SULLIVAN, Nick. <i>Ensuring Randomness with Linux's Random Number Generator</i>. Cloudflare Blog.</h6>
+<h5>Documentation</h5>
+<h6>WHEELER, David. <i>Random numbers</i>. Secure Programming for Linux and Unix HOWTO, 2003.</h6>
 
-  <h4>Documentation</h4>
-
-  <h6>AUFFEVE, Alexia. <i>Qu’est-ce que le hasard quantique ?</i> Le Journal du CNRS, 2017.</h6>
-  <h6>WHEELER, David. <i>Random numbers</i> Secure Programming for Linux and Unix HOWTO, 2003.</h6>
 </div>
