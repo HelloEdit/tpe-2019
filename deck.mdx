@@ -1,5 +1,5 @@
 import { Invert, Split, Horizontal } from 'mdx-deck/layouts'
-import { Head, Image, Appear } from 'mdx-deck'
+import { Head, Image, Appear, Notes } from 'mdx-deck'
 
 import { SlotMachine } from './src/'
 
@@ -7,6 +7,11 @@ export { default as theme } from './theme'
 
 <Head>
   <title>TPE - Générer l'aléatoire</title>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://platform.twitter.com/css/tweet.0940efb0bc0eb82a2de893b3e7b414bf.light.ltr.css"
+  />
 </Head>
 
 export default Invert
@@ -100,9 +105,6 @@ for i in range(500):
   <h3>La sortie est déterminée seulement par la graine et l'algorithme</h3>
   <h3>La même graine donnera toujours la même sortie</h3>
   <h3>Les sorties sont soumises à la périodicité du générateur</h3>
-  <h3>
-    La qualité des sorties augmente au détriment de la vitesse de génération
-  </h3>
 </Appear>
 
 ---
@@ -118,6 +120,12 @@ export default Invert
   width="90%"
 />
 
+<Notes>Hasard épistémique (ignorance)</Notes>
+
+---
+
+# Le chat de Schrödinger
+
 ---
 
 export default Invert
@@ -126,6 +134,8 @@ export default Invert
   src="https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/schema_quantique.png"
   width="75%"
 />
+
+<Notes>Hasard ontologique (fondamental)</Notes>
 
 ---
 
@@ -140,7 +150,7 @@ export default Invert
 
 ---
 
-# Et après ?
+# Conclusion
 
 ---
 
