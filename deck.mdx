@@ -31,6 +31,14 @@ export default Invert
 
 ---
 
+export default Split
+
+Enigma
+
+César
+
+---
+
 > “la génération de nombres aléatoires est trop importante pour être confiée au hasard”
 
 – Robert R. Coveyou
@@ -48,6 +56,8 @@ function getRandomSlotValue() {
 }
 ```
 
+<Notes>Abstraction</Notes>
+
 ---
 
 export default Invert
@@ -56,11 +66,17 @@ export default Invert
 
 #### _PRNG_
 
+<Notes>Famille PRNG Paradoxe génération déterministe</Notes>
+
 ---
 
 > “Quiconque considère l'arithmétique pour générer des nombres aléatoires est en train de commettre un péché”
 
 – John V. Neumann
+
+<Notes>
+  Neumann > Mathématicien & Physicien précurseur dans les PRNG (carré médian)
+</Notes>
 
 ---
 
@@ -74,6 +90,8 @@ export default Invert
   style={{ margin: '50px 0' }}
 />
 
+<Notes>Explication paramètres + graine initial X0</Notes>
+
 ---
 
 export default Invert
@@ -82,6 +100,11 @@ export default Invert
   src="https://raw.githubusercontent.com/HelloEdit/tpe-2019/master/img/python_organi.png"
   style={{ width: '80vh' }}
 />
+
+<Notes>
+  Fonctionnement rapide + montrer facilité intégration ds système info + Source
+  d'aléa
+</Notes>
 
 ---
 
@@ -97,6 +120,10 @@ gen = gcl(a=25, c=16, m=256, x=seed)
 for i in range(500):
   print(next(gen))
 ```
+
+<Notes>
+  DEMONSTRATION https://repl.it/@HelloEdit/linear-congruential-generator
+</Notes>
 
 ---
 
